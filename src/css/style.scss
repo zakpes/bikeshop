@@ -1,0 +1,58 @@
+:root {
+	--purple: #6f42c1;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* navbar
+ * ==================================== */
+
+.navbar-brand {
+	height: auto;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #fff;
+	transition: all .3s;
+}
+
+.navbar-toggle:hover .navbar-toggle .icon-bar {
+	background-color: #ccc;
+}
+
+.bar-mid-x {
+    transform: scaleX(0);
+}
+
+.bar-top-x {
+    transform: rotate(45deg);
+    margin-top: 6px;
+}
+
+.navbar-toggle .icon-bar + .icon-bar.bar-bot-x {
+    transform: rotate(-45deg);
+	margin-top: -8px;
+    margin-bottom: 6px;
+}
+
+/* btn hover effects */
+.btn {
+	background-color: hsl(1.8, 64.7%, 50%);
+	border-color: hsl(1.8, 64.7%, 50%);
+}
+
+.btn:hover {
+	color: hsl(0, 0%, 100%) !important;
+	border-color: hsl(0, 0%, 21.2%);
+	box-shadow: inset 0 -50px 0px hsla(0, 0%, 0%, 0.1);
+}
+
+.btn:focus, .btn:active {
+	box-shadow: inset 0 -62px 0px hsla(0, 0%, 0%, 0.5);
+	color: hsl(0, 0%, 100%) !important;
+}
+
+
