@@ -7,11 +7,85 @@
 	padding: 0;
 }
 
-/* navbar
- * ==================================== */
+h1, h2, h5 {
+	font-family: "Old Standard TT", serif;
+}
+
+h1 {
+	font-size: 72px;
+}
+
+h2 {
+	font-size: 60px;
+	color: #3c3c3c;
+	margin-bottom: 40px;
+}
+
+h4, h6 {
+	font-size: 28px;
+	font-weight: 300;
+	font-family: Ubuntu, sans-serif;
+}
+
+h5 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+h6 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+p,
+.navbar-nav li {
+	font-size: 18px;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	color: #6a6a6a;
+}
+
+.navbar-nav li:first-child {
+	margin-left: 214px;
+}
+
+.navbar-nav li a {
+	color: #fff;
+}
+
+.navbar {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color: hsla(0, 0%, 0%, 0);
+	transition: all .3s;
+}
 
 .navbar-brand {
-	height: auto;
+	padding: 0 15px 15px;
+}
+
+.basket-container,
+.basket-container img,
+.basket-container p {
+	display: inline-block;
+	color: #fff;
+}
+
+.basket-container {
+	position: relative;
+	margin-top: 13px;
+	cursor: pointer;
+	overflow: hidden;
+	transition: all .3s;
+}
+
+.basket-container img {
+	margin-top: -6px;
+	margin-right: 4px;
+}
+
+.basket-container p span {
+	color: #ccc;
 }
 
 .navbar-toggle .icon-bar {
@@ -38,21 +112,397 @@
     margin-bottom: 6px;
 }
 
-/* btn hover effects */
+
+/* section #hero
+ * ==================================== */
+
+#hero {
+	background: url(../img/hero-bike.jpg) fixed;
+	background-position: center top;
+	background-size: cover;
+	text-align: center;
+	padding-top: 250px;
+	padding-bottom: 325px;
+	/*margin-top: -88px;*/
+	position: relative;
+}
+
+.hero-video {
+	display: none;
+	position: absolute;
+	top: -196px;
+	left: 0;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+#hero h1,
+.navbar-nav li {
+	color: #fff;
+	overflow: hidden;
+}
+
+.navbar-nav a::after,
+.basket::after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	left: -100%;
+	bottom: 0;
+	transition: all .3s;
+}
+
+.navbar-nav a:hover::after,
+.basket-container:hover .basket::after {
+	left: 0;
+}
+
+.basket-container:hover .basket::after {
+}
+
+#hero h1 {
+	margin-bottom: 26px;
+}
+
+#hero h4 {
+	color: #c2c1c1;
+	margin-bottom: 50px;
+}
+
+#hero .play-btn {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	cursor: pointer;
+}
+
+#hero .play-btn i {
+	font-size: 22px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-40%, -50%);
+	position: absolute;
+	height: 50px;
+}
+
+.fa-angle-down {
+	font-size: 70px;
+	color: #fff;
+	cursor: pointer;
+	animation: angle-down 1.6s linear infinite;
+}
+
+@keyframes angle-down {
+
+	0% {transform: translateY(0);}
+	10% {transform: translateY(20px);}
+	100% {transform: translateY(0);}
+}
+
+
+/* #presentation
+ * ==================================== */
+
+#presentation,
+#bikes-showcase {
+	padding-top: 100px;
+}
+
+#presentation h2 {
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+
+#presentation p {
+	max-width: 90%;
+}
+
+#presentation p + p,
+#bikes-showcase p,
+#featured-items p {
+	margin-bottom: 40px;
+}
+
+.img-yellow-bike {
+	margin-left: -500px;
+}
+
+.quote {
+	margin-top: 100px;
+	font-style: italic;
+	border-left: 1px solid #dadada;
+	padding-left: 20px;
+}
+
+.quote::before {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 180px;
+	background-color: #dadada;
+	position: absolute;
+	top: 64%;
+	left: -28%;
+}
+
+/* section #bikes-showcase
+ * ==================================== */
+
+#bikes-showcase,
+#featured-items,
+#newsletter,
+.newsletter-container {
+	text-align: center;
+}
+
+/*#bikes-showcase-carousel .item-1,
+.slick-slider .slide-1 {
+	background: url(../img/red-bike.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+#bikes-showcase-carousel .item-2,
+.slick-slider .slide-2 {
+	background: url(../img/yellow-bike.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+#bikes-showcase-carousel .item-3,
+.slick-slider .slide-3 {
+	background: url(../img/pink-bike-resized.jpg) center center no-repeat;
+	background-size: cover;
+}*/
+
+.carousel-inner {
+	width: 80%;
+	margin: 0 auto;
+	overflow: visible;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	background-image: none;
+}
+
+.carousel-control,
+.uk-slidenav {
+	width: 0;
+	color: #282828;
+	text-shadow: none;
+	opacity: 0.7;
+	transition: all .3s;
+	top: 50%;
+	margin-top: -50px;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+	position: absolute;
+}
+
+.fa-angle-left,
+.uk-slidenav-position .uk-slidenav-previous {
+	left: -70px;
+}
+
+.fa-angle-right,
+.uk-slidenav-position .uk-slidenav-next {
+	right: -70px;
+}
+
+.carousel-control:focus,
+.carousel-control:hover {
+	color: #282828;
+	opacity: 1;
+}
+
+.carousel-control .fa-angle-left,
+.carousel-control .fa-angle-right,
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+	font-size: 100px;
+}
+
+.slick-prev,
+.slick-next {
+	height: 60px;
+	z-index: 999;
+}
+
+.slick-prev::before {
+	content: "\f104";
+}
+
+.slick-next::before {
+	content: "\f105";
+}
+
+.slick-prev::before, .slick-next::before {
+	font-family: 'FontAwesome';
+	font-size: 40px;
+	line-height: 1;
+	opacity: .75;
+	color: hsl(0, 0%, 10%);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition: all .3s;
+}
+
+
+/* featured-items
+ * ==================================== */
+
+#featured-items {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.featured-item {
+	text-align: center;
+	height: 370px;
+	position: relative;
+}
+
+.featured-item .btn,
+.featured-item h5,
+.featured-item h6 {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+}
+
+.featured-item h5 {
+	bottom: 26%;
+}
+
+.featured-item h6 {
+	bottom: 18%;
+}
+
+.featured-item img {
+	margin: 0 auto;
+}
+
+.btn-buy,
+.btn-read-more {
+	text-transform: uppercase;
+}
+
+.slick-dots {
+	bottom: -60px;
+}
+
+
+/* section #newsletter-signup
+ * ==================================== */
+
+#newsletter-signup {
+	background: url(../img/newsletter-bg.jpg) center center no-repeat;
+	background-size: cover;
+	padding-top: 146px;
+	padding-bottom: 246px;
+}
+
+.newsletter-container {
+	background-color: #fff;
+	padding: 100px 110px 90px;
+}
+
+.newsletter-container h2 {
+	margin-bottom: 50px;
+}
+
+.newsletter-container p {
+	margin-bottom: 60px;
+}
+
+#newsletter-signup .form-control {
+	height: auto;
+	padding: 18px 100px 18px 30px;
+	font-size: 18px;
+	color: #6a6a6a;
+	background-color: #e8e8e8;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	margin-right: -4px;
+	transition: all .3s;
+}
+
+#newsletter-signup .form-control:active {
+	box-shadow: none;
+}
+
+#newsletter-signup .form-control:focus {
+	background-color: hsl(0, 0%, 80%);
+}
+
 .btn {
-	background-color: hsl(1.8, 64.7%, 50%);
-	border-color: hsl(1.8, 64.7%, 50%);
+	background-color: hsl(0, 0%, 24%);
+	color: #fff;
+	border-radius: 0;
+	height: 62px;
+	width: 200px;
+	font-size: 18px;
+	font-family: Ubuntu, sans-serif;
+	padding: 5px 5px 4px;
+	transition: all .3s;
 }
 
-.btn:hover {
-	color: hsl(0, 0%, 100%) !important;
-	border-color: hsl(0, 0%, 21.2%);
-	box-shadow: inset 0 -50px 0px hsla(0, 0%, 0%, 0.1);
+.btn:hover,
+.btn:active,
+.btn:focus {
+	color: #fff;
+	background-color: hsl(0, 0%, 14%);
 }
 
-.btn:focus, .btn:active {
-	box-shadow: inset 0 -62px 0px hsla(0, 0%, 0%, 0.5);
-	color: hsl(0, 0%, 100%) !important;
+.btn:active:hover,
+.btn:active:focus {
+	color: #fff;
+	background-color: hsl(0, 0%, 7%);
+}
+
+.btn span {
+	border: 1px solid HSL(0, 0%, 58%);
+	height: 49px;
+	display: block;
+	width: 188px;
+	padding-top: 10px;
 }
 
 
+/* footer
+ * ==================================== */
+
+footer {
+	margin-top: -98px;
+}
+
+footer p {
+	margin: 36px 0;
+	display: inline-block;
+	color: #fff;
+}
+
+footer .container {
+	border-top: 1px solid HSL(0, 0%, 58%);
+}
+
+footer img {
+	margin-top: 26px;
+	float: right;
+}
