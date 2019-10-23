@@ -19,6 +19,7 @@ h2 {
 	font-size: 60px;
 	color: #3c3c3c;
 	margin-bottom: 40px;
+	line-height: 1.1;
 }
 
 h4, h6 {
@@ -45,12 +46,10 @@ p,
 	color: #6a6a6a;
 }
 
-.navbar-nav li:first-child {
-	margin-left: 214px;
-}
-
-.navbar-nav li a {
+.navbar-expand-md .navbar-nav .nav-link {
 	color: #fff;
+	position: relative;
+	padding: 15px;
 }
 
 .navbar {
@@ -61,7 +60,11 @@ p,
 }
 
 .navbar-brand {
-	padding: 0 15px 15px;
+	padding-left: 0;
+}
+
+.navbar-brand > img {
+	transition: width 200ms;
 }
 
 .basket-container,
@@ -171,7 +174,7 @@ p,
 }
 
 #hero h4 {
-	color: #c2c1c1;
+	color: hsl(214, 15%, 91%);
 	margin-bottom: 50px;
 }
 
@@ -418,6 +421,7 @@ p,
 .newsletter-container {
 	background-color: #fff;
 	padding: 100px 110px 90px;
+	box-shadow: 0 2px 4px hsl(209, 20%, 25%);
 }
 
 .newsletter-container h2 {
@@ -430,10 +434,10 @@ p,
 
 #newsletter-signup .form-control {
 	height: auto;
-	padding: 18px 100px 18px 30px;
+	padding: 17px 100px 18px 30px;
 	font-size: 18px;
-	color: #6a6a6a;
-	background-color: #e8e8e8;
+	color: hsl(37, 11%, 28%);
+	background-color: hsl(43, 13%, 90%);
 	border: 0;
 	border-radius: 0;
 	box-shadow: none;
@@ -448,11 +452,11 @@ p,
 }
 
 #newsletter-signup .form-control:focus {
-	background-color: hsl(0, 0%, 80%);
+	background-color: hsl(39, 11%, 69%);
 }
 
 .btn {
-	background-color: hsl(0, 0%, 24%);
+	background-color: hsl(0, 0%, 23%);
 	color: #fff;
 	border-radius: 0;
 	height: 62px;
@@ -467,7 +471,8 @@ p,
 .btn:active,
 .btn:focus {
 	color: #fff;
-	background-color: hsl(0, 0%, 14%);
+	background-color: hsl(0, 0%, 13%);
+	box-shadow: none;
 }
 
 .btn:active:hover,
@@ -482,6 +487,8 @@ p,
 	display: block;
 	width: 188px;
 	padding-top: 10px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 

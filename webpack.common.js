@@ -1,7 +1,8 @@
 module.exports = {
     entry: {
         index: "./src/page-index/index.js",
-        about: "./src/page-about/about.js"
+        about: "./src/page-about/about.js",
+        vendorCSS: "./src/js/vendorCSS.js"
     },
     module: {
         rules: [
