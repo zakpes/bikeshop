@@ -1,7 +1,12 @@
 import $ from "jquery";
 import NiceScroll from "jquery.nicescroll";
-import {bgParallax} from "../page-index/index";
+import {bgParallax} from "./bg-parallax";
 import {scrollTo} from "./smooth-scroll";
+
+const mediaLG = window.matchMedia("(max-width: 1199px)");
+const mediaMD = window.matchMedia("(max-width: 991px)");
+const mediaSM = window.matchMedia("(max-width: 767px)");
+const mediaXS = window.matchMedia("(max-width: 576px)");
 
 // navbar toggle hamburger menu btn X
 $(".navbar-toggle").mouseenter(function() {
@@ -43,8 +48,6 @@ $(window).scroll(function () {
     var $window = $(window);
     var wScroll = $window.scrollTop();
     var windowW = $window.width();
-    console.log(wScroll);
-    
 
     if (windowW >= 768) {
 
@@ -73,14 +76,43 @@ $(window).scroll(function () {
 });
 
 // nicescroll
-$("body").niceScroll({
-    zindex: 9999,
-    cursorcolor: "hsl(0, 0%, 23%)",
-    cursorwidth: "10px",
-    cursorborder: "0",
-    autohidemode: false,
-    background: "hsla(0, 0%, 69%, 0.2)"
-});
+
+// mediaSmChange();
+// mediaSM.addEventListener("change", mediaSmChange);
+
+// function mediaSmChange() {
+//     if (!mediaSM.matches) {
+//         niceScrollMain();
+//     } else {
+//         return;
+//     }
+// }
+
+function loadNiceScroll() {
+    if (window.innerWidth < 768) {
+        
+        return;
+        console.log("nicescroll activated");
+        
+    } else {
+        console.log("nicescroll disabled");
+        niceScrollMain();
+    }
+}
+
+loadNiceScroll();
+window.addEventListener("resize", loadNiceScroll);
+
+function niceScrollMain() {
+    $("body").niceScroll({
+        zindex: 9999,
+        cursorcolor: "hsl(0, 0%, 23%)",
+        cursorwidth: "10px",
+        cursorborder: "0",
+        autohidemode: false,
+        background: "hsla(0, 0%, 69%, 0.2)"
+    });
+}
 
 // copyright year
 const date = new Date();

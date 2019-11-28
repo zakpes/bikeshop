@@ -1,0 +1,752 @@
+:root {
+  --purple: #6f42c1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h5 {
+  font-family: "Old Standard TT", serif;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+  color: #3c3c3c;
+  margin-bottom: 40px;
+  line-height: 1.1;
+}
+
+h4, h6 {
+  font-size: 28px;
+  font-weight: 300;
+  font-family: Ubuntu, sans-serif;
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+p,
+.navbar-nav li {
+  font-size: 18px;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 300;
+  color: #6a6a6a;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  color: #fff;
+  position: relative;
+  padding: 15px;
+}
+
+.navbar {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all .3s;
+}
+
+.navbar-brand {
+  padding-left: 0;
+}
+
+.navbar-brand > img {
+  transition: width 200ms;
+}
+
+.basket-container,
+.basket-container img,
+.basket-container p {
+  display: inline-block;
+  color: #fff;
+}
+
+.basket-container {
+  position: relative;
+  margin-top: 13px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.basket-container img {
+  margin-top: -6px;
+  margin-right: 4px;
+}
+
+.basket-container p span {
+  color: #ccc;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+  transition: all .3s;
+}
+
+.navbar-toggle:hover .navbar-toggle .icon-bar {
+  background-color: #ccc;
+}
+
+.bar-mid-x {
+  transform: scaleX(0);
+}
+
+.bar-top-x {
+  transform: rotate(45deg);
+  margin-top: 6px;
+}
+
+.navbar-toggle .icon-bar + .icon-bar.bar-bot-x {
+  transform: rotate(-45deg);
+  margin-top: -8px;
+  margin-bottom: 6px;
+}
+
+/* section #hero
+ * ==================================== */
+#hero {
+  background: url(imgs/hero-bike.d056aeb7575b631421282a4535ed0a7c.jpg) fixed;
+  background-position: center top;
+  background-size: cover;
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 325px;
+  /*margin-top: -88px;*/
+  position: relative;
+}
+
+.hero-video {
+  display: none;
+  position: absolute;
+  top: -196px;
+  left: 0;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#hero h1,
+.navbar-nav li {
+  color: #fff;
+  overflow: hidden;
+}
+
+.navbar-nav a::after,
+.basket::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  transition: all .3s;
+}
+
+.navbar-nav a:hover::after,
+.basket-container:hover .basket::after {
+  left: 0;
+}
+
+#hero h1 {
+  margin-bottom: 26px;
+}
+
+#hero h4 {
+  color: #e5e8eb;
+  margin-bottom: 50px;
+}
+
+#hero .play-btn {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+
+#hero .play-btn i {
+  font-size: 22px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  position: absolute;
+  height: 50px;
+}
+
+.fa-angle-down {
+  font-size: 70px;
+  color: #fff;
+  cursor: pointer;
+  animation: angle-down 1.6s linear infinite;
+}
+
+@keyframes angle-down {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* #presentation
+ * ==================================== */
+#presentation,
+#bikes-showcase {
+  padding-top: 100px;
+}
+
+#presentation h2 {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+#presentation p {
+  max-width: 90%;
+}
+
+#presentation p + p,
+#bikes-showcase p,
+#featured-items p {
+  margin-bottom: 40px;
+}
+
+.img-yellow-bike {
+  margin-left: -500px;
+}
+
+.quote {
+  margin-top: 100px;
+  font-style: italic;
+  border-left: 1px solid #dadada;
+  padding-left: 20px;
+}
+
+.quote::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 180px;
+  background-color: #dadada;
+  position: absolute;
+  top: 64%;
+  left: -28%;
+}
+
+/* section #bikes-showcase
+ * ==================================== */
+#bikes-showcase,
+#featured-items,
+#newsletter,
+.newsletter-container {
+  text-align: center;
+}
+
+/*#bikes-showcase-carousel .item-1,
+.slick-slider .slide-1 {
+	background: url(../img/red-bike.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+#bikes-showcase-carousel .item-2,
+.slick-slider .slide-2 {
+	background: url(../img/yellow-bike.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+#bikes-showcase-carousel .item-3,
+.slick-slider .slide-3 {
+	background: url(../img/pink-bike-resized.jpg) center center no-repeat;
+	background-size: cover;
+}*/
+.carousel-inner {
+  width: 80%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel-control,
+.uk-slidenav {
+  width: 0;
+  color: #282828;
+  text-shadow: none;
+  opacity: 0.7;
+  transition: all .3s;
+  top: 50%;
+  margin-top: -50px;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  position: absolute;
+}
+
+.fa-angle-left,
+.uk-slidenav-position .uk-slidenav-previous {
+  left: -70px;
+}
+
+.fa-angle-right,
+.uk-slidenav-position .uk-slidenav-next {
+  right: -70px;
+}
+
+.carousel-control:focus,
+.carousel-control:hover {
+  color: #282828;
+  opacity: 1;
+}
+
+.carousel-control .fa-angle-left,
+.carousel-control .fa-angle-right,
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+  font-size: 100px;
+}
+
+.slick-prev,
+.slick-next {
+  height: 60px;
+  z-index: 999;
+}
+
+.slick-prev::before {
+  content: "\f104";
+}
+
+.slick-next::before {
+  content: "\f105";
+}
+
+.slick-prev::before, .slick-next::before {
+  font-family: 'FontAwesome';
+  font-size: 40px;
+  line-height: 1;
+  opacity: .75;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .3s;
+}
+
+/* featured-items
+ * ==================================== */
+#featured-items {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.featured-item {
+  text-align: center;
+  height: 370px;
+  position: relative;
+}
+
+.featured-item .btn,
+.featured-item h5,
+.featured-item h6 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.featured-item h5 {
+  bottom: 26%;
+}
+
+.featured-item h6 {
+  bottom: 18%;
+}
+
+.featured-item img {
+  margin: 0 auto;
+}
+
+.btn-buy,
+.btn-read-more {
+  text-transform: uppercase;
+}
+
+.slick-dots {
+  bottom: -60px;
+}
+
+/* section #newsletter-signup
+ * ==================================== */
+#newsletter-signup {
+  background: url(imgs/newsletter-bg.bcdda042617994fc8972bb8dafc6517c.jpg) center center no-repeat;
+  background-size: cover;
+  padding-top: 146px;
+  padding-bottom: 246px;
+}
+
+.newsletter-container {
+  background-color: #fff;
+  padding: 100px 110px 90px;
+  box-shadow: 0 2px 4px #33404d;
+}
+
+.newsletter-container h2 {
+  margin-bottom: 50px;
+}
+
+.newsletter-container p {
+  margin-bottom: 60px;
+}
+
+#newsletter-signup .form-control {
+  height: auto;
+  padding: 17px 100px 18px 30px;
+  font-size: 18px;
+  color: #4f4940;
+  background-color: #e9e7e2;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 300;
+  margin-right: -4px;
+  transition: all .3s;
+}
+
+#newsletter-signup .form-control:active {
+  box-shadow: none;
+}
+
+#newsletter-signup .form-control:focus {
+  background-color: #b9b3a7;
+}
+
+.btn {
+  background-color: #3b3b3b;
+  color: #fff;
+  border-radius: 0;
+  height: 62px;
+  width: 200px;
+  font-size: 18px;
+  font-family: Ubuntu, sans-serif;
+  padding: 5px 5px 4px;
+  transition: all .3s;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  color: #fff;
+  background-color: #212121;
+  box-shadow: none;
+}
+
+.btn:active:hover,
+.btn:active:focus {
+  color: #fff;
+  background-color: #121212;
+}
+
+.btn span {
+  border: 1px solid HSL(0, 0%, 58%);
+  height: 49px;
+  display: block;
+  width: 188px;
+  padding-top: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* footer
+ * ==================================== */
+footer {
+  margin-top: -98px;
+}
+
+footer p {
+  margin: 36px 0;
+  display: inline-block;
+  color: #fff;
+}
+
+footer .container {
+  border-top: 1px solid HSL(0, 0%, 58%);
+}
+
+footer img {
+  margin-top: 26px;
+  float: right;
+}
+
+/* MEDIA QUERIES DESKTOP-FIRST
+ * ==================================== */
+/* Large Devices, Wide Screens */
+@media screen and (max-width: 1199px) {
+  .img-yellow-bike {
+    margin-left: -640px;
+  }
+  .quote::before {
+    left: -34%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 52px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .navbar-nav li:first-child {
+    margin-left: 40px;
+  }
+  #presentation h2 {
+    margin-top: 0;
+  }
+  .img-yellow-bike {
+    margin-left: -364px;
+    width: 700px;
+    height: auto;
+    margin-top: 100px;
+  }
+  .quote::before {
+    width: 150px;
+    left: -36%;
+  }
+  .carousel-acc-item {
+    width: 33%;
+  }
+  #newsletter-signup .form-control {
+    padding-right: 34px;
+  }
+  .btn-subscribe {
+    width: 160px;
+  }
+  .btn-subscribe span {
+    width: 148px;
+  }
+  .newsletter-container {
+    padding: 50px 110px 80px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+}
+
+/* Small Devices, Tablets */
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  .navbar-nav {
+    text-align: right;
+    padding-right: 12px;
+  }
+  .navbar {
+    min-height: inherit;
+  }
+  .navbar-brand {
+    padding-top: 4px;
+    height: auto;
+    transition: all .3s;
+  }
+  .navbar-brand > img {
+    width: 160px;
+    transition: all .3s;
+  }
+  .nav > li {
+    display: inline-block;
+    margin-left: 70%;
+  }
+  .basket-container {
+    margin-top: 6px;
+    margin-right: 11px;
+  }
+  .basket::after {
+    bottom: 0px;
+  }
+  #hero {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+  .fa-angle-down {
+    font-size: 56px;
+  }
+  #presentation .col-sm-6 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #presentation p {
+    max-width: 100%;
+  }
+  .quote::before {
+    display: none;
+  }
+  #presentation,
+  #bikes-showcase,
+  #featured-items {
+    padding-top: 50px;
+  }
+  .carousel-acc-item {
+    width: 50%;
+  }
+  #newsletter-signup {
+    padding-top: 80px;
+    padding-bottom: 200px;
+  }
+  .newsletter-container {
+    padding: 30px 80px 60px;
+  }
+  #presentation h2,
+  .newsletter-container h2 {
+    margin-bottom: 30px;
+  }
+  #presentation p + p, #bikes-showcase p, #featured-items p {
+    margin-bottom: 30px;
+  }
+  #presentation .btn {
+    margin-bottom: 50px;
+  }
+  .newsletter-container p {
+    margin-bottom: 40px;
+  }
+  .newsletter-container .form-control {
+    margin-bottom: 30px;
+  }
+  footer img {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .img-yellow-bike {
+    margin-left: -330px;
+    width: 650px;
+  }
+  footer {
+    text-align: center;
+    margin-top: -162px;
+  }
+  footer p {
+    margin-bottom: 24px;
+  }
+  footer img {
+    float: none;
+    margin: 0 auto 26px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width: 480px) {
+  .nav > li {
+    margin-left: 56%;
+  }
+  .img-yellow-bike {
+    margin-left: -288px;
+    width: 560px;
+  }
+  .newsletter-container {
+    padding: 30px 40px 60px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  #hero h4 {
+    margin-bottom: 30px;
+  }
+  .newsletter-container {
+    padding: 30px 30px 60px;
+  }
+  #presentation .col-sm-6 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #presentation .col-xs-6 {
+    width: 100%;
+  }
+  #presentation .img-yellow-bike {
+    margin-left: -230px;
+    margin-top: 50px;
+  }
+  .quote {
+    margin-top: 30px;
+    padding-right: 20px;
+  }
+  #newsletter-signup .form-control {
+    padding: 12px 100px 12px 30px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    height: 50px;
+    font-size: 16px;
+  }
+  .btn span {
+    height: 37px;
+    padding-top: 7px;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media screen and (max-width: 320px) {
+  #presentation .img-yellow-bike {
+    margin-left: -264px;
+  }
+  .newsletter-container {
+    padding: 30px 20px 50px;
+  }
+}
+
+.about {
+  background-color: red;
+}
+

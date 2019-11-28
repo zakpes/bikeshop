@@ -74,11 +74,11 @@
 }
 
 .featured-items-slider .flickity-prev-next-button.previous {
-	left: -30px;
+    left: -30px;
 }
 
 .featured-items-slider .flickity-prev-next-button.next {
-	right: -30px;
+    right: -30px;
 }
 
 .flickity-carousel-bike {
@@ -115,4 +115,43 @@
 
 h2 {
     margin-bottom: 30px;
+}
+
+.w-block {
+    display: block;
+    height: 10px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+/* @media quieries
+* ==================================== */
+@media screen and ( max-width : 991px ) {
+    
+    .carousel-acc-item {
+        width: 33%;
+    }
+
+    .btn-buy {
+        max-width: 100%;
+
+        span {
+            max-width: 100%;
+        }
+    }
+}
+/* Small Devices, Tablets */
+@media screen and ( max-width : 767px ) {
+        
+    .carousel-acc-item {
+        width: 50%;
+    }
+
+    .featured-items-slider .flickity-prev-next-button.next {
+        right: 0;
+    }
+
+    .featured-items-slider .flickity-prev-next-button.prev {
+        left: 0;
+    }
 }

@@ -51,7 +51,11 @@
 	.quote::before {
 		width: 150px;
 		left: -36%;
-	}
+    }
+    
+    .carousel-acc-item {
+        width: 33%;
+    }
 
 	#newsletter-signup .form-control {
 		padding-right: 34px;
@@ -159,7 +163,11 @@
 	#bikes-showcase,
 	#featured-items {
 		padding-top: 50px;
-	}
+    }
+    
+    .carousel-acc-item {
+        width: 50%;
+    }
 
 	#newsletter-signup {
 		padding-top: 80px;

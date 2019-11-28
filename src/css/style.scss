@@ -4,8 +4,12 @@
 
 * {
 	margin: 0;
-	padding: 0;
+    padding: 0;
 }
+
+// html, body {
+//     overflow-x: hidden;
+// }
 
 h1, h2, h5 {
 	font-family: "Old Standard TT", serif;
@@ -164,9 +168,6 @@ p,
 .navbar-nav a:hover::after,
 .basket-container:hover .basket::after {
 	left: 0;
-}
-
-.basket-container:hover .basket::after {
 }
 
 #hero h1 {

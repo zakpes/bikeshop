@@ -5,35 +5,63 @@ import "../js/main";
 // import "../css/main.scss";
 import "./index.scss";
 
-export const bgParallax = function() {
 
-  var settings = {
-      slow: 10,
-      normal: 5,
-      fast: 2
-  };
-
-  var wScroll = $(window).scrollTop() / settings.normal;
-
-  $("#hero").css("background-position", "center -" + wScroll + "px");
-}
 
 // $(window).scroll(function() {
 //   bgParallax();
 // });
 
-let carouselBike = document.querySelector('.flickity-carousel-bike');
-let flkty = new Flickity( carouselBike, {
+// flickity fix for iOS
+(function() {
+    var touchingCarousel = false,
+      touchStartCoords;
+
+    document.body.addEventListener('touchstart', function(e) {
+      if (e.target.closest('.flickity-slider')) {
+        touchingCarousel = true;
+      } else {
+        touchingCarousel = false;
+        return;
+      }
+
+      touchStartCoords = {
+        x: e.touches[0].pageX,
+        y: e.touches[0].pageY
+      }
+    });
+
+    document.body.addEventListener('touchmove', function(e) {
+      if (!(touchingCarousel && e.cancelable)) {
+        return;
+      }
+
+      var moveVector = {
+        x: e.touches[0].pageX - touchStartCoords.x,
+        y: e.touches[0].pageY - touchStartCoords.y
+      };
+
+      if (Math.abs(moveVector.x) > 7)
+        e.preventDefault()
+
+    }, {passive: false});
+})();
+
+const carouselBike = document.querySelector('.flickity-carousel-bike');
+const flkty = new Flickity( carouselBike, {
   // options
   cellAlign: 'center',
   contain: true,
-  wrapAround: true
+  wrapAround: true,
+  touchVerticalScroll: false,
+  dragThreshold: 1
 });
 
-let carouselAcc = document.querySelector('.flickity-carousel-accessories');
-let flktyAcc = new Flickity( carouselAcc, {
+const carouselAcc = document.querySelector('.flickity-carousel-accessories');
+const flktyAcc = new Flickity( carouselAcc, {
   // options
   cellAlign: 'left',
   contain: true,
-  wrapAround: true
+  wrapAround: true,
+  touchVerticalScroll: false,
+  dragThreshold: 1
 });
